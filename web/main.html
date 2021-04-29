@@ -12,6 +12,7 @@
 <body>
 	<input id="location" type="text" placeholder="Введите название страны и города ..." required="" value="Нью-Йорк, США">
 	<button id="show">Узнать погоду</button>
+	<div id="gorod" ></div>
 	<div class="content">
 		<div class="tabs-wrapper">
 			<div class="tabs">
@@ -20,7 +21,11 @@
 				<span class="tab">Вкладка 3</span>
 			</div>
 			<div class="tabs-content">
-				<div class="tab-item"><div id="info"></div></div>
+				<div class="tab-item">
+					<div id="info">
+
+					</div>
+				</div>
 				<div class="tab-item">Содержимое 2</div>
 				<div class="tab-item">Содержимое 3</div>
 			</div>
@@ -31,6 +36,7 @@
 	<script type="text/javascript">
 		async function display_weather(){
 			let place = document.getElementById('location').value;//Получаем из текстового поля стринг значение
+			document.getElementById('gorod').innerHTML = place;//полученное значение выводим в див с id info
 			let res = await eel.get_weather(place)();//отдаем pythom значение place на обработку
 			document.getElementById('info').innerHTML = res;//полученное значение выводим в див с id info
 		}
@@ -46,6 +52,7 @@
 
 		jQuery('#show').on('click', function(){//для удобства чтобы при нажатии кнопки запускался скрипт
 			display_weather();
+			$('#gorod').show( "slow" );
 		})
 	</script>
 </body>

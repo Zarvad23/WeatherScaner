@@ -1,5 +1,9 @@
 import eel #подключение библиотеки веб интерфесов
 import pyowm #подключение библиотеки для взаимодействия с API OpenWeatherMap
+from pyowm.utils.config import get_default_config
+
+config_dict = get_default_config()
+config_dict['language'] = 'ru'
 
 owm = pyowm.OWM("f17480b84563d8c6cde6484c071ca775") 
 
@@ -11,7 +15,22 @@ def get_weather(place):#Описание функции с аргументом 
 	w = observation.weather 
 
 	temp = w.temperature('celsius')['temp']
-	result = "В городе " + city + " сейчас " + str(temp) + " градусов!"
+	result1 = "<li>" + "<span>" + "Температура: "+ "</span>" + "<img src='img/temperature.png'>" + str(temp)+ "℃" + "</li>"
+
+	details = w.detailed_status
+	result2 = "<li>" + "Погода: " + str(details) + "</li>"
+
+	wind = w.wind()['speed']
+	result3 = "<li>" + "Ветер: " + str(wind) + " м/с" + "</li>"
+
+	humidity = w.humidity
+	result4 = "<li>" + "Влажность: " + str(humidity) + "%" + "</li>"
+
+	clouds = w.clouds
+	result5 = "<li>" + "Осадки: " + str(clouds) + "</li>"
+
+	result = "<ul>"+result1+result2+result3+result4+result5+"</ul>"
+
 	return result
 
 #Вывод Окна веб приложения
