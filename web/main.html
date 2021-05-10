@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Погода</title>
+	<script src="eel.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+	<input id="location" type="text" placeholder="Введите название страны и города ..." required="" value="Нью-Йорк">
+	<button id="show" onclick="weatherstack()">Узнать погоду</button>
+	<div id="gorod" ></div>
+	<div class="content">
+		<div class="tabs-wrapper">
+			<div class="tabs">
+				<span class="tab"><img src="img/openweather_logo.png" alt=""></span>
+				<span class="tab"><img src="img/apilayer_icon_weatherstack.png" alt="">weather<br>stack</span>
+				<span class="tab"><img src="img/yahooweather.png" alt="">Yahoo<br>weather</span>
+			</div>
+			<div class="tabs-content">
+				<div class="tab-item">
+					<div id="info">
+						
+					</div>
+				</div>
+				<div class="tab-item">
+					<div id="output">
+						
+					</div>
+				</div>
+				<div class="tab-item">
+					<div id="yahoo">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+</body>
+</html>
