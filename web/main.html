@@ -13,7 +13,12 @@
 <body>
 	<input id="location" type="text" placeholder="Введите название страны и города ..." required="" value="Нью-Йорк">
 	<button id="show" onclick="weatherstack()">Узнать погоду</button>
-	<div id="gorod" ></div>
+	<div class="gorod_container">
+		<div id="gorod"></div>
+		<div id="reload">
+			<button id="reload_button" onclick="display_weather()"></button>
+		</div>
+	</div>
 	<div class="content">
 		<div class="tabs-wrapper">
 			<div class="tabs">
