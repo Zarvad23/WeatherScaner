@@ -51,6 +51,8 @@ body{
 
 .gorod_container{
 	display: flex;
+	justify-content: center;
+	width: 100%;
 }
 
 #reload_button{
@@ -77,7 +79,7 @@ body{
 	height: 40px;
 	padding: 6px;
 	margin-top: 20px;
-	margin-right: 22.5%;
+	margin-right: 174px;
 	text-align: center;
 	background: #16BFFD;
 }
@@ -89,7 +91,6 @@ body{
 	padding: 10px;
 	background-color: #a4d5eb;
 	margin-top: 20px;
-	margin-left: 22.5%;
 	text-align: center;
 }
 
@@ -437,9 +438,6 @@ body{
 	}
 	.tabs{
 		max-width: 122px;
-	}
-	#gorod{
-		margin-left: 37.3%;
 	}
 	.tabs-content{
 
