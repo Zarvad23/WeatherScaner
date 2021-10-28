@@ -5,6 +5,10 @@
 	list-style-type: none;
 }
 
+html{
+	width: 800px;
+}
+
 body{
 	font-family: "Roboto", sans-serif;
 	font-weight: 300;
@@ -52,7 +56,6 @@ body{
 .gorod_container{
 	display: flex;
 	justify-content: center;
-	width: 100%;
 }
 
 #reload_button{
